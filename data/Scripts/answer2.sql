@@ -54,8 +54,8 @@ FROM data_analyst_jobs
 WHERE review_count > 5000
 GROUP BY company
 ORDER BY AVG(star_rating) DESC;
-Q10: Company with more than 5000 reviews and highest star rating = General Motors
-General Motors star rating = 4.1999998090000000 */
+Q10: Company with more than 5000 reviews and highest star rating = General Motors, Unilever, Microsoft, Nike, American Express, Kaiser Permanente
+Average star rating = 4.1999998090000000 */
 
 /* SELECT count(DISTINCT title)
 FROM data_analyst_jobs
@@ -75,23 +75,23 @@ AND title NOT LIKE '%analytics%';
 Q12: How many job titles do not contain 'Analyst' or 'Analytics'? = 4
 What word do these positions have in common? = Tableau */
 
-/*SELECT domain, count(title), days_since_posting
+/*SELECT domain, count(title)
 FROM data_analyst_jobs
 WHERE domain IS NOT NULL
 AND days_since_posting > 21
 AND skill LIKE '%SQL%' OR skill LIKE '%Sql%' OR skill LIKE '%sql%'
 OR title LIKE '%SQL%' OR title LIKE '%Sql%' OR title LIKE '%sql%' 
-GROUP BY domain, days_since_posting
+GROUP BY domain
 ORDER BY count(title) DESC;
 BONUS Q: Which 3 industries in top 4 on list?  
--Banks and Financial Services
 -Internet and Software
--Health Care
+-Banks and Financial Services
+-Consulting and Business Services
 BONUS Q: How many jobs listed for more than 3 weeks for each of top 4?
--Banks and Financial Services = 51
--Internet and Software = 49
--Health Care = 45
--Consulting and Business Services = 44 */
+-Internet and Software = 62
+-Banks and Financial Services = 61
+-Consulting and Business Services = 61
+-Health Care = 53 */
 
 
 
